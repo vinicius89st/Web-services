@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.in28minutes.rest.webservices.restfulwebservices;
+package com.in28minutes.rest.webservices.restfulwebservices.user;
 
 import java.util.Date;
 
@@ -15,10 +15,18 @@ public class User {
     
     private int id;
     private String name;
-
-    public User(int id, String name) {
+    private Date date;
+    
+    protected User(){
+        
+    }
+    
+    
+    public User(int id, String name, Date date) {
+        super();
         this.id = id;
         this.name = name;
+        this.date = date;
     }
 
     public int getId() {
@@ -37,7 +45,12 @@ public class User {
         this.name = name;
     }
     
-    
-    
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
     
 }
