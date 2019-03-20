@@ -6,6 +6,8 @@
 package com.in28minutes.rest.webservices.restfulwebservices.user;
 
 import java.util.Date;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
 
 /**
  *
@@ -14,7 +16,10 @@ import java.util.Date;
 public class User {
     
     private int id;
+    
+    @Size(min = 2)
     private String name;
+    @Past
     private Date date;
     
     protected User(){
