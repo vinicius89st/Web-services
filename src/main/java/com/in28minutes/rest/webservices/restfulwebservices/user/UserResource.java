@@ -45,7 +45,7 @@ public class UserResource {
                 .path("/{id}")
                 .buildAndExpand(savedUser.getId())
                 .toUri();
-        return null;
+        return ResponseEntity.created(location).build();
     }
     
 }
